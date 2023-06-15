@@ -1,0 +1,14 @@
+---
+- name: Check if a file exists
+  hosts: all
+  gather_facts: false
+  
+  tasks:
+    - name: Check if file exists
+      stat:
+        path: /root/awx/
+      register: file_exists
+      
+    - name: Show result
+      debug:
+        var: file_exists.stat.exists
