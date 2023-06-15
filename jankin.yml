@@ -11,7 +11,7 @@
         dest: /etc/yum.repos.d/jenkins.repo
       headers:
         Content-Type: application/json
-        force_basic_auth: true  
+      force_basic_auth: true  
 
     - name: Import jenkins key from url
       ansible.builtin.rpm_key:
